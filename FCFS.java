@@ -51,6 +51,7 @@ public class FCFS{
         
         System.out.println("avarage of waiting time : " + avgwt);
         System.out.println("avarage of turn around time : " + avgtat);
+        sc.close();
     }
 }
 
