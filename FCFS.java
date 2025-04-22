@@ -1,61 +1,56 @@
-
 import java.util.*;
-
-
-public class FCFS {
-    public static void main(String[] args) {
+public class FCFS{
+    public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter number of processes: ");
+        System.out.print("Enter number of processes : ");
         int n = sc.nextInt();
-
-
-        int[] bt = new int[n]; // burst time
-        int[] wt = new int[n]; // waiting time
-        int[] tat = new int[n]; // turnaround time
-
-
-        System.out.println("Enter burst time for each process:");
-        for (int i = 0; i < n; i++) {
-            System.out.print("P" + (i + 1) + ": ");
+        int [] at = new int [n];
+        int [] bt = new int [n];
+        int [] ct = new int [n];
+        int [] wt = new int [n];
+        int [] tat = new int [n];
+        
+        System.out.println("Enter the arrival time and burst time for each process : ");
+        for(int i=0; i<n; i++){
+            System.out.print("p" + (i+1) + ":");
+            at[i] = sc.nextInt();
             bt[i] = sc.nextInt();
         }
-
-
-        // Waiting time calculation
-        wt[0] = 0;
-        for (int i = 1; i < n; i++) {
-            wt[i] = wt[i - 1] + bt[i - 1];
+        // ct
+        int currTime = 0;
+        for(int i=0; i<n; i++){
+            if(currTime<at[i]){
+                currTime = at[i];
+            }
+            ct[i] =  currTime + bt[i];
+            currTime = ct[i];
         }
-
-
-        // Turnaround time calculation
-        for (int i = 0; i < n; i++) {
-            tat[i] = wt[i] + bt[i];
+        // tat
+        for(int i=0; i<n; i++){
+            tat[i] = ct[i] - at[i];
         }
-
-
-        // Calculating total WT and TAT for average
-        int totalWT = 0, totalTAT = 0;
-        for (int i = 0; i < n; i++) {
-            totalWT += wt[i];
-            totalTAT += tat[i];
+        // wt
+        for(int i=0; i<n; i++){
+            wt[i] = tat[i] - bt[i];
         }
-
-
-        double avgWT = (double) totalWT / n;
-        double avgTAT = (double) totalTAT / n;
-
-
-        // Displaying results
-        System.out.println("\nProcess\tBT\tWT\tTAT");
-        for (int i = 0; i < n; i++) {
-            System.out.println("P" + (i + 1) + "\t" + bt[i] + "\t" + wt[i] + "\t" + tat[i]);
+        // total
+        int totalwt=0;
+        int  totaltat=0;
+        for(int i=0; i<n;i++){
+            totalwt += wt[i];
+            totaltat += tat[i];
         }
-
-
-        System.out.printf("\nAverage Waiting Time: %.2f\n", avgWT);
-        System.out.printf("Average Turnaround Time: %.2f\n", avgTAT);
-        sc.close();
+        // avg
+        double avgwt = totalwt/n;
+        double avgtat = totaltat/n;
+        
+        System.out.println("P" + "\tAT" + "\tBT" + "\tCT" + "\tTAT" + "\tWT");
+        for(int i=0; i<n; i++){
+            System.out.println("p" +(i+1) + "\t" + at[i] + "\t" + bt[i] + "\t" + ct[i] + "\t" + tat[i] + "\t" + wt[i] );
+        }
+        
+        System.out.println("avarage of waiting time : " + avgwt);
+        System.out.println("avarage of turn around time : " + avgtat);
     }
 }
 
