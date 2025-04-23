@@ -1,0 +1,158 @@
+Here’s a comprehensive list of **Linux commands from basic to advanced**, along with a **one-line explanation** of each:
+
+---
+
+### 🔹 **Basic Linux Commands**
+| Command | Description |
+|--------|-------------|
+| `pwd` | Prints the current working directory. |
+| `ls` | Lists files and directories. |
+| `cd` | Changes the current directory. |
+| `mkdir` | Creates a new directory. |
+| `rmdir` | Deletes an empty directory. |
+| `touch` | Creates an empty file. |
+| `cp` | Copies files or directories. |
+| `mv` | Moves or renames files or directories. |
+| `rm` | Deletes files or directories. |
+| `clear` | Clears the terminal screen. |
+| `echo` | Displays a line of text. |
+| `cat` | Displays contents of a file. |
+| `head` | Shows the first few lines of a file. |
+| `tail` | Shows the last few lines of a file. |
+| `man` | Shows the manual for a command. |
+| `whoami` | Displays the current user. |
+| `exit` | Exits the terminal session. |
+
+---
+
+### 🔹 **File Permissions & Ownership**
+| Command | Description |
+|--------|-------------|
+| `chmod` | Changes file permissions. |
+| `chown` | Changes file owner and group. |
+| `umask` | Sets default permissions for new files. |
+
+---
+
+### 🔹 **File Search & Management**
+| Command | Description |
+|--------|-------------|
+| `find` | Searches for files in a directory hierarchy. |
+| `locate` | Finds files using a database (faster than `find`). |
+| `which` | Shows the path of an executable. |
+| `whereis` | Finds source, binary, and man pages for a command. |
+| `grep` | Searches text using patterns. |
+
+---
+
+### 🔹 **System Information**
+| Command | Description |
+|--------|-------------|
+| `uname -a` | Displays system information. |
+| `top` | Shows real-time system processes. |
+| `htop` | Enhanced version of `top` (if installed). |
+| `df -h` | Shows disk space usage. |
+| `du -sh` | Shows size of a file or directory. |
+| `free -h` | Displays memory usage. |
+| `uptime` | Shows how long the system has been running. |
+| `hostname` | Displays the system's hostname. |
+| `lscpu` | Displays CPU architecture info. |
+| `lsblk` | Lists block devices. |
+| `dmesg` | Displays system boot logs. |
+
+---
+
+### 🔹 **Networking**
+| Command | Description |
+|--------|-------------|
+| `ip a` or `ifconfig` | Shows IP and network interfaces. |
+| `ping` | Checks network connectivity. |
+| `netstat -tulpn` | Displays active connections and listening ports. |
+| `ss -tuln` | Faster, modern alternative to `netstat`. |
+| `curl` | Transfers data from/to a server. |
+| `wget` | Downloads files from the web. |
+| `nslookup` | Queries DNS servers. |
+| `traceroute` | Traces the route packets take to a host. |
+
+---
+
+### 🔹 **Process Management**
+| Command | Description |
+|--------|-------------|
+| `ps` | Displays running processes. |
+| `kill` | Sends signal to a process (usually to stop it). |
+| `killall` | Kills all processes by name. |
+| `nice` | Launches a process with a specified priority. |
+| `renice` | Changes the priority of a running process. |
+| `jobs` | Lists background jobs. |
+| `fg` | Brings a background job to the foreground. |
+| `bg` | Resumes a job in the background. |
+
+---
+
+### 🔹 **Archiving & Compression**
+| Command | Description |
+|--------|-------------|
+| `tar -cvf` | Creates a tar archive. |
+| `tar -xvf` | Extracts a tar archive. |
+| `zip` / `unzip` | Compresses or extracts .zip files. |
+| `gzip` / `gunzip` | Compresses or decompresses .gz files. |
+
+---
+
+### 🔹 **Package Management**
+**Debian/Ubuntu-based:**
+| Command | Description |
+|--------|-------------|
+| `apt update` | Updates package lists. |
+| `apt upgrade` | Upgrades installed packages. |
+| `apt install` | Installs a package. |
+| `apt remove` | Removes a package. |
+
+**RedHat/CentOS-based:**
+| Command | Description |
+|--------|-------------|
+| `yum install` | Installs a package. |
+| `yum update` | Updates all packages. |
+
+---
+
+### 🔹 **Disk Partition & Mounting**
+| Command | Description |
+|--------|-------------|
+| `fdisk` | Partition management tool. |
+| `mount` | Mounts a file system. |
+| `umount` | Unmounts a file system. |
+| `blkid` | Shows block device UUIDs. |
+
+---
+
+### 🔹 **User Management**
+| Command | Description |
+|--------|-------------|
+| `adduser` / `useradd` | Adds a new user. |
+| `passwd` | Changes user password. |
+| `deluser` / `userdel` | Deletes a user. |
+| `groupadd` | Creates a new group. |
+| `usermod` | Modifies user accounts. |
+| `id` | Shows user ID and group info. |
+
+---
+
+### 🔹 **Advanced & Miscellaneous**
+| Command | Description |
+|--------|-------------|
+| `alias` | Creates a shortcut for a command. |
+| `cron` / `crontab` | Schedules recurring tasks. |
+| `at` | Schedules one-time tasks. |
+| `ssh` | Connects to remote systems securely. |
+| `scp` | Securely copies files between systems. |
+| `rsync` | Syncs files and directories. |
+| `screen` / `tmux` | Creates terminal multiplexing sessions. |
+| `strace` | Traces system calls of a program. |
+| `lsof` | Lists open files. |
+| `journalctl` | Views systemd logs. |
+
+---
+
+Would you like this as a **PDF or downloadable cheat sheet**?
